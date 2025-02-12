@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirusTotal IP Lookup</title>
+    <script>
+        async function checkIP() {
+            const ip = document.getElementById("ipAddress").value;
+            const url = `https://www.virustotal.com/api/v3/ip_addresses/${ip}`;
+            
+            const headers = {
+                "accept": "application/json",
+                "x-apikey": "f2ec1a932e93344447420ed21e5f7401c069a7b9dc9e42bb8baff2cb56cba1f5"
+            };
+            
+            try {
+                const response = await fetch(url, { headers });
+                const data = await response.json();
+                document.getElementById("result").innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById("result").innerText = "Error fetching data.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>VirusTotal IP Lookup</h2>
+    <input type="text" id="ipAddress" placeholder="Enter IP address">
+    <button onclick="checkIP()">Check</button>
+    <pre id="result"></pre>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        .host { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px; background-color: #f9f9f9; }
+        .host h2 { margin-top: 0; }
+        .ports, .vulnerabilities { margin-top: 10px; }
+        .port, .vulnerability { padding: 10px; border-radius: 5px; margin-top: 5px; }
+        .port { background-color: #e0f7fa; }
+        .vulnerability { background-color: #ffebee; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scan Results</h1>
+        <div class="host">
+            <h2>192.168.1.1 (Windows 10)</h2>
+            <div class="ports">
+                <h3>Open Ports</h3>
+                <div class="port">Port 80 (TCP) - Apache</div>
+                <div class="port">Port 443 (TCP) - nginx</div>
+            </div>
+            <div class="vulnerabilities">
+                <h3>Vulnerabilities</h3>
+                <div class="vulnerability">
+                    <strong>CVE-2021-12345 (CVSS 7.5, High Risk)</strong>
+                    <p>SQL injection vulnerability detected in web application.</p>
+                    <em>Solution: Sanitize user input using prepared statements.</em>
+                </div>
+                <div class="vulnerability">
+                    <strong>CVE-2022-67890 (CVSS 9.0, Critical Risk)</strong>
+                    <p>Remote code execution vulnerability in Apache.</p>
+                    <em>Solution: Update Apache to the latest version.</em>
+                </div>
+            </div>
+        </div>
+        <div class="host">
+            <h2>192.168.1.2 (Linux - Ubuntu 20.04)</h2>
+            <div class="ports">
+                <h3>Open Ports</h3>
+                <div class="port">Port 22 (TCP) - OpenSSH</div>
+            </div>
+            <div class="vulnerabilities">
+                <h3>Vulnerabilities</h3>
+                <div class="vulnerability">
+                    <strong>CVE-2023-54321 (CVSS 6.2, Medium Risk)</strong>
+                    <p>Weak SSH encryption algorithms detected.</p>
+                    <em>Solution: Disable weak algorithms and enforce strong ciphers.</em>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

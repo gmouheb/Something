@@ -1,0 +1,52 @@
+<scan>
+    <host>
+        <address>192.168.1.1</address>
+        <os>Windows 10</os>
+        <ports>
+            <port portid="80" protocol="tcp">
+                <service>Apache</service>
+            </port>
+            <port portid="443" protocol="tcp">
+                <service>nginx</service>
+            </port>
+        </ports>
+        <vulnerabilities>
+            <vulnerability>
+                <id>VULN-12345</id>
+                <cve>CVE-2021-12345</cve>
+                <cvss>7.5</cvss>
+                <risk>high</risk>
+                <description>SQL injection vulnerability detected in web application.</description>
+                <solution>Sanitize user input using prepared statements.</solution>
+            </vulnerability>
+            <vulnerability>
+                <id>VULN-67890</id>
+                <cve>CVE-2022-67890</cve>
+                <cvss>9.0</cvss>
+                <risk>critical</risk>
+                <description>Remote code execution vulnerability in Apache.</description>
+                <solution>Update Apache to the latest version.</solution>
+            </vulnerability>
+        </vulnerabilities>
+    </host>
+
+    <host>
+        <address>192.168.1.2</address>
+        <os>Linux (Ubuntu 20.04)</os>
+        <ports>
+            <port portid="22" protocol="tcp">
+                <service>OpenSSH</service>
+            </port>
+        </ports>
+        <vulnerabilities>
+            <vulnerability>
+                <id>VULN-54321</id>
+                <cve>CVE-2023-54321</cve>
+                <cvss>6.2</cvss>
+                <risk>medium</risk>
+                <description>Weak SSH encryption algorithms detected.</description>
+                <solution>Disable weak algorithms and enforce strong ciphers.</solution>
+            </vulnerability>
+        </vulnerabilities>
+    </host>
+</scan>

@@ -1,0 +1,59 @@
+{
+    "scan_results": [
+        {
+            "ip": "192.168.1.1",
+            "os": "Windows 10",
+            "ports": [
+                {
+                    "port": "80",
+                    "protocol": "tcp",
+                    "service": "Apache"
+                },
+                {
+                    "port": "443",
+                    "protocol": "tcp",
+                    "service": "nginx"
+                }
+            ],
+            "vulnerabilities": [
+                {
+                    "id": "VULN-12345",
+                    "cve": "CVE-2021-12345",
+                    "cvss": "7.5",
+                    "risk": "high",
+                    "description": "SQL injection vulnerability detected in web application.",
+                    "solution": "Sanitize user input using prepared statements."
+                },
+                {
+                    "id": "VULN-67890",
+                    "cve": "CVE-2022-67890",
+                    "cvss": "9.0",
+                    "risk": "critical",
+                    "description": "Remote code execution vulnerability in Apache.",
+                    "solution": "Update Apache to the latest version."
+                }
+            ]
+        },
+        {
+            "ip": "192.168.1.2",
+            "os": "Linux (Ubuntu 20.04)",
+            "ports": [
+                {
+                    "port": "22",
+                    "protocol": "tcp",
+                    "service": "OpenSSH"
+                }
+            ],
+            "vulnerabilities": [
+                {
+                    "id": "VULN-54321",
+                    "cve": "CVE-2023-54321",
+                    "cvss": "6.2",
+                    "risk": "medium",
+                    "description": "Weak SSH encryption algorithms detected.",
+                    "solution": "Disable weak algorithms and enforce strong ciphers."
+                }
+            ]
+        }
+    ]
+}
